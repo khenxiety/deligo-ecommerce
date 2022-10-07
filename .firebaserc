@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "deligo-ecommerce": {
+      "hosting": {
+        "webclient": [
+          "deligo-ecommerce"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "deligo-ecommerce"
+  }
+}

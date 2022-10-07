@@ -1,0 +1,108 @@
+<header class="header">
+  <div class="uk-container uk-container-medium">
+    <nav class="uk-navbar-container" uk-navbar style="background: transparent">
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="#">Deligo</a>
+
+        <ul class="uk-navbar-nav">
+          <li>
+            <a href="#">
+              <span
+                class="uk-icon uk-margin-small-right"
+                uk-icon="icon: star"
+              ></span>
+              Features
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <div class="uk-navbar-item">
+          <form action="javascript:void(0)">
+            <input
+              class="uk-input uk-form-width-medium"
+              type="text"
+              placeholder="Search"
+            />
+            <button class="uk-button uk-button-default">
+              <span class="" uk-icon="icon: search; ratio: 1"></span>
+            </button>
+          </form>
+        </div>
+        <div class="uk-navbar-item">
+          <!-- cart button -->
+          <button class="uk-button uk-button-default" (click)="toggleCart()">
+            <span class="" uk-icon="icon: cart; ratio: 1"></span>
+          </button>
+        </div>
+        <div class="uk-navbar-item">
+          <a routerLink="./login">Login</a>
+          <a routerLink="./signup" class="uk-margin-small-left">Sign-up</a>
+        </div>
+      </div>
+    </nav>
+    <div class="secondary-nav">
+      <button class="uk-button uk-margin-small-bottom cat-btn" type="button">
+        Categories
+        <span class="uk-margin-small-left" uk-icon="chevron-down"></span>
+      </button>
+      <div uk-dropdown>
+        <ul class="uk-nav uk-dropdown-nav">
+          <li class="uk-active"><a href="#">Active</a></li>
+          <li><a href="#">Most popular</a></li>
+          <li class="uk-nav-header">All Categories</li>
+          <li>
+            <a href="#" *ngFor="let cat of categories">{{ cat.name }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div [ngClass]="isCartClosed ? 'cart closed' : 'cart '">
+    <div class="container">
+      <div class="card-header">
+        <div class="cart-header-content">
+          <h3>Your Cart</h3>
+          <button class="clear-btn" (click)="toggleCart()">
+            <span uk-icon="icon: close; ratio: 1"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cart-content">
+        <ul class="uk-list uk-list-striped">
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+
+          <li>List item 1</li>
+          <li>List item 3</li>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-footer-container">
+          <div class="left">
+            <h5 class="uk-margin-small-bottom">
+              Total Amount (3 items):
+              <h4>P 500.00</h4>
+            </h5>
+          </div>
+          <div class="right">
+            <span>
+              <button type="button" class="uk-button uk-button-primary">
+                Checkout
+              </button></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

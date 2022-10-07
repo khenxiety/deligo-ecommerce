@@ -1,0 +1,102 @@
+<div class="page-wrapper">
+  <div class="uk-container uk-container-medium">
+    <div class="uk-grid-small" uk-grid>
+      <div class="uk-width-1-2@m">
+        <div class="uk-card uk-card-default uk-card-body product-img">
+          <!-- <img
+            src="{{ product[0]?.images[2] }}"
+            alt=""
+            height="100%"
+            width="100%"
+          /> -->
+          <div
+            class="uk-position-relative uk-visible-toggle"
+            tabindex="-1"
+            uk-slider="center: true"
+          >
+            <div uk-spinner *ngIf="isLoading"></div>
+            <ul class="uk-slider-items uk-grid" *ngIf="!isLoading">
+              <li
+                class="uk-width-3-2"
+                *ngFor="let images of product[0]?.images"
+              >
+                <div class="uk-panel">
+                  <div uk-lightbox>
+                    <a class="uk-button uk-button-default" href="{{ images }}"
+                      ><img src="{{ images }}" width="600" height="600" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <a
+              class="uk-position-center-left uk-position-small uk-hidden-hover"
+              href="#"
+              uk-slidenav-previous
+              uk-slider-item="previous"
+            ></a>
+            <a
+              class="uk-position-center-right uk-position-small uk-hidden-hover"
+              href="#"
+              uk-slidenav-next
+              uk-slider-item="next"
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-expand@m">
+        <div class="uk-padding uk-padding-remove-vertical">
+          <div class="header">
+            <small> {{ product[0]?.category.name }} ></small>
+
+            <h2>
+              <div uk-spinner *ngIf="isLoading"></div>
+              {{ product[0]?.title }}
+            </h2>
+
+            <h3 class="uk-margin-medium-top">
+              Php
+              <div uk-spinner *ngIf="isLoading"></div>
+              {{ product[0]?.price }}.00
+            </h3>
+
+            <div uk-spinner *ngIf="isLoading"></div>
+            <p class="uk-margin-medium-top" *ngIf="!isLoading">
+              {{ product[0]?.description }}
+            </p>
+
+            <div
+              class="uk-margin-large-top"
+              style="display: flex; flex-direction: column; max-width: 190px"
+            >
+              <label for="quantity">Quantity</label>
+
+              <input
+                class="uk-input uk-form-width-medium"
+                type="number"
+                id="quantity"
+                placeholder=""
+                min="1"
+                max="1000"
+              />
+
+              <div class="uk-margin">
+                <button
+                  type="button"
+                  class="uk-button uk-button-primary uk-width-1-1"
+                >
+                  <span
+                    class="uk-margin-small-right"
+                    uk-icon="icon: cart; ratio: 1"
+                  ></span>
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

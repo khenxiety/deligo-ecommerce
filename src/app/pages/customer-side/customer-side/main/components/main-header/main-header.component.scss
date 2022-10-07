@@ -1,0 +1,99 @@
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+    margin: 0;
+}
+.header{
+    background: #fcfcfc;
+    position: relative;
+    box-shadow: 2px 1px 13px -2px rgba(73, 73, 73, 0.421);
+    // -webkit-box-shadow: 2px 1px 13px -2px rgba(0,0,0,0.75);
+    // -moz-box-shadow: 2px 1px 13px -2px rgba(0,0,0,0.75);
+
+
+    *{
+    font-family: 'Poppins', sans-serif;
+
+    }
+    position: sticky;
+    top: 0;
+    z-index: 500;
+
+
+
+    .cat-btn{
+        padding-inline: 0; background: transparent;
+
+        &:hover{
+            span{
+                rotate: (180deg);
+            }
+        }
+    }
+    
+
+    .cart{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        min-width: 600px;
+        background-color: white;
+
+        border-left: 1px solid #eaeaea;
+        padding: 1.5em;
+        transition: all .3s ease-in-out;
+
+
+        .container{
+            height: calc(100% - 46px);
+            width: 100%;
+            position: relative;
+        
+            .card-header{
+               
+                padding-block: 30px;
+                position: fixed;
+                top: 0;
+                background-color: #fff;
+
+
+                .clear-btn{
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+                .cart-header-content{
+                    max-width: 600px;
+                    width: 600px;
+                    display: flex;
+                    justify-content: space-between;
+
+                }
+            }
+            .cart-content{
+                margin-block: 60px;
+                height: 81%;
+                overflow-y: scroll;
+
+            }
+            .cart-footer{
+                padding-block: 30px;
+                position: fixed;
+                bottom: 0;
+                background-color: #fff;
+                border-top: 1px solid #eaeaea;
+                .cart-footer-container{
+                    max-width: 600px;
+                    width: 600px;
+
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+            }
+        }
+    }
+    .cart.closed{
+        transform: translateX(100%);
+    }
+}
