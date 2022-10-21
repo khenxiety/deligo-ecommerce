@@ -1,0 +1,16 @@
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card{
+    width: 500px;
+    padding: 2em;
+    margin-block: 60px;
+}
+.page-wrapper{
+    display: flex;
+    min-height: calc(100vh - 80px);
+    justify-content: center;
+    background: #eff0f5;
+}

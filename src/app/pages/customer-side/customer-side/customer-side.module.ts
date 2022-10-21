@@ -20,11 +20,11 @@ const routes: Routes = [
         component: HomepageComponent,
       },
       {
-        path: 'login',
+        path: 'customer-login',
         component: CustomerLoginComponent,
       },
       {
-        path: 'signup',
+        path: 'customer-signup',
         component: CustomerSignupComponent,
       },
       {

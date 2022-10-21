@@ -1,7 +1,7 @@
 <div class="page-wrapper">
   <div class="uk-container uk-container-medium">
     <div class="uk-card uk-card-default card">
-      <h4>Signup on Deligo</h4>
+      <h4>Sign up as Deligo Delivery</h4>
 
       <form class="uk-grid-small" uk-grid>
         <div class="uk-width-1-3">
@@ -44,8 +44,47 @@
             id="zipcode"
           />
         </div>
-        <div class="uk-width-1-1@s">
+        <div class="uk-width-1-4@s">
           <label for="dp">Profile picture</label>
+
+          <div uk-form-custom="target: true " class="uk-margin-small-left">
+            <input type="file" id="dp" />
+            <input
+              class="uk-input uk-form-width-medium"
+              type="text"
+              placeholder="Select file"
+              disabled
+            />
+          </div>
+        </div>
+        <div class="uk-width-1-4@s">
+          <label for="dp">Driver's License</label>
+
+          <div uk-form-custom="target: true " class="uk-margin-small-left">
+            <input type="file" id="dp" />
+            <input
+              class="uk-input uk-form-width-medium"
+              type="text"
+              placeholder="Select file"
+              disabled
+            />
+          </div>
+        </div>
+        <div class="uk-width-1-4@s">
+          <label for="dp">Tricycle Franchise</label>
+
+          <div uk-form-custom="target: true " class="uk-margin-small-left">
+            <input type="file" id="dp" />
+            <input
+              class="uk-input uk-form-width-medium"
+              type="text"
+              placeholder="Select file"
+              disabled
+            />
+          </div>
+        </div>
+        <div class="uk-width-1-4@s">
+          <label for="dp">NBI Clearance</label>
 
           <div uk-form-custom="target: true " class="uk-margin-small-left">
             <input type="file" id="dp" />
@@ -59,7 +98,7 @@
         </div>
 
         <div class="uk-width-1-4@s">
-          <label for="contact">Contact number</label>
+          <label for="contact">TIN</label>
 
           <input class="uk-input" type="number" id="contact" />
         </div>

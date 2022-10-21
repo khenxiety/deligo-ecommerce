@@ -1,0 +1,38 @@
+.page-wrapper
+
+{
+    min-height: calc(100vh - 80px);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+h4{
+    font-weight: 600;
+    margin: 0;
+}
+.top-shops{
+    .uk-card{
+        display: grid;
+        place-items: center;
+        height: 250px;
+    }
+    
+}
+.products{
+    display: block;
+    .products-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+}
+
+
+.hide-text{
+    overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+}
